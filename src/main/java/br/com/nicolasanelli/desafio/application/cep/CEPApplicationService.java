@@ -1,4 +1,4 @@
-package br.com.nicolasanelli.desafio.application;
+package br.com.nicolasanelli.desafio.application.cep;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

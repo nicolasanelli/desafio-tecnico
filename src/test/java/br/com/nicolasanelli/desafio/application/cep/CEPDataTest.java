@@ -1,4 +1,4 @@
-package br.com.nicolasanelli.desafio.application;
+package br.com.nicolasanelli.desafio.application.cep;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
