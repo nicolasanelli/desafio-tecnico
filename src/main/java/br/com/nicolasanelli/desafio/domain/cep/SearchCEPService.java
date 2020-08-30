@@ -2,6 +2,8 @@ package br.com.nicolasanelli.desafio.domain.cep;
 
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,8 @@ public class SearchCEPService {
 
     public static String ERR_INVALID_CEP = "CEP Inválido";
 
+    Logger logger = LoggerFactory.getLogger(SearchCEPService.class);
+
     @Autowired
     private CEPProvider provider;
 
@@ -20,6 +24,8 @@ public class SearchCEPService {
     }
     
     public CEP searchByCode(String code) {
+        
+        logger.info("Searching CEP by code " + code);
 
         code = replaceHyphen(code);
         if (!validateCodeLength(code)) {
