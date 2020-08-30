@@ -8,7 +8,7 @@ public class CEPData {
     public String address;
     public String district;
 
-    CEPData(String code, String state, String city, String address, String district) {
+    public CEPData(String code, String state, String city, String address, String district) {
         this.code = code;
         this.state = state;
         this.city = city;
