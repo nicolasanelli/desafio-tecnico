@@ -30,3 +30,10 @@ The domain layer is in **desafio.domain package**. This is where business logic 
 Swagger provides a simple way to test and map all the service endpoints, presenting their params and other important info. It is enabled for this service, and it's end-points are:
 - http://{host}:{port}/v3/api-docs
 - http://{host}:{port}/swagger-ui/
+
+## Actuator
+
+``"Actuator includes a number of additional features that help us to monitor and manage the Spring Boot application"``
+
+Springboot actuator includes health check, auditing, monitoring and metrics endpoints. In this case it was added for it health check endpoint:
+- http://{host}:{port}/actuator/health
