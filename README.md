@@ -23,3 +23,10 @@ The application is in **desafio.application package**. This is where happens som
 
 The domain layer is in **desafio.domain package**. This is where business logic are concentred. This layer usually do the business validations and data processing. This layer is stricted closed, and can only be access by the exposed method for the public services. This is important to prevent any wrong development.
 
+## Swagger
+
+``"Swagger is in essence an Interface Description Language for describing RESTFUL APIs expressed using JSON."``
+
+Swagger provides a simple way to test and map all the service endpoints, presenting their params and other important info. It is enabled for this service, and it's end-points are:
+- http://{host}:{port}/v3/api-docs
+- http://{host}:{port}/swagger-ui/
