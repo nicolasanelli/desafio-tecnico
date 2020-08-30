@@ -13,6 +13,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import br.com.nicolasanelli.desafio.exception.BusinessException;
+
 @ExtendWith(MockitoExtension.class)
 public class SearchCEPServiceTest {
     
@@ -60,21 +62,21 @@ public class SearchCEPServiceTest {
     @Test
     public void searchByCodeWithWrongSize() {
 
-        assertThrows(RuntimeException.class, () -> {
+        assertThrows(BusinessException.class, () -> {
             service.searchByCode("1234567");
-        }, "CEP Inválido");
+        }, SearchCEPService.ERR_INVALID_CEP);
 
-        assertThrows(RuntimeException.class, () -> {
+        assertThrows(BusinessException.class, () -> {
             service.searchByCode("123456789");
-        }, "CEP Inválido");
+        }, SearchCEPService.ERR_INVALID_CEP);
 
-        assertThrows(RuntimeException.class, () -> {
+        assertThrows(BusinessException.class, () -> {
             service.searchByCode("1234-567");
-        }, "CEP Inválido");
+        }, SearchCEPService.ERR_INVALID_CEP);
 
-        assertThrows(RuntimeException.class, () -> {
+        assertThrows(BusinessException.class, () -> {
             service.searchByCode("1234--567");
-        }, "CEP Inválido");
+        }, SearchCEPService.ERR_INVALID_CEP);
     }
 
     @Test
@@ -98,8 +100,8 @@ public class SearchCEPServiceTest {
     @Test
     public void searchByCodeWhenNotFound() {
 
-        assertThrows(RuntimeException.class, () -> {
+        assertThrows(BusinessException.class, () -> {
             service.searchByCode("00000000");
-        }, "CEP Inválido");
+        }, SearchCEPService.ERR_INVALID_CEP);
     }
 }

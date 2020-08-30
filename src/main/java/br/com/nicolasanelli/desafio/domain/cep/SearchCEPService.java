@@ -5,6 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.nicolasanelli.desafio.exception.BusinessException;
+
 @Service
 public class SearchCEPService {
 
@@ -21,7 +23,7 @@ public class SearchCEPService {
 
         code = replaceHyphen(code);
         if (!validateCodeLength(code)) {
-            throw new RuntimeException(ERR_INVALID_CEP);
+            throw new BusinessException(ERR_INVALID_CEP);
         }
 
         Optional<CEP> cepOpt;
@@ -36,7 +38,7 @@ public class SearchCEPService {
             code = replaceRightWithZerosAtPosition(code, i);
         }
         
-        throw new RuntimeException(ERR_INVALID_CEP);
+        throw new BusinessException(ERR_INVALID_CEP);
     }
 
     private Boolean validateCodeLength(String code) {
