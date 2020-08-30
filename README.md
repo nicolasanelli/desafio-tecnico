@@ -4,7 +4,12 @@ CEP search service is a Java service build in Springboot framework for dealing w
 
 ## Structure
 
-The project has a layer structured API, that could be splitted into 3 main parts, web layer, application layer and domain layer;
+The project has a layer structured API, that could be splitted into 3 main parts, web layer, application layer and domain layer:
+
+- desafio
+  - web
+  - application
+  - domain
 
 ### Web layer
 
