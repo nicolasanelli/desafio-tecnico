@@ -37,3 +37,11 @@ Swagger provides a simple way to test and map all the service endpoints, present
 
 Springboot actuator includes health check, auditing, monitoring and metrics endpoints. In this case it was added for it health check endpoint:
 - http://{host}:{port}/actuator/health
+
+
+## Security
+
+The springsecurity configuration of this project creates a in memory static user for basic authentication in API. The configuration class can be found in **desafio.config package**. And the credential are:
+
+- user: luiza
+- password: labs
