@@ -1,4 +1,4 @@
-![](https://github.com/NicolasAnelli/desafio-tecnico/.github/workflows/tests/badge.svg)
+![](https://github.com/NicolasAnelli/desafio-tecnico/workflows/tests/badge.svg)
 # CEP search service
 
 CEP search service is a Java service build in Springboot framework for dealing with CEP necessities when you only have a code, and want some more info about the fully address.
